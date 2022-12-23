@@ -1,0 +1,42 @@
+.App {
+  background:#0d1112;
+  color: #fff;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+.form_container{
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.data_table_container{
+  border-radius: 5px;
+  color: #fff;
+  background: #141b23;
+  padding: 35px;
+  margin-top: 50px;
+}
+
+.data_table_container .formControl {
+  background: #fff;
+  border: 0;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 0px;
+  color: #000;
+  outline: 0 !important;
+  position: relative;
+  z-index: 999;
+}
+
+.data_table_container header {
+  margin-top: -50px;
+}
+
+.data_table_container h4 {
+  position: relative;
+  z-index: 9;
+}
