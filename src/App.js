@@ -11,6 +11,7 @@ function App(props) {
   const [search, setSearch] = useState("");
   const [allproducts, setAllProducts] = useState([]);
   const [filterdProducts, setFilteredProducts] = useState([]);
+  const [successmsg, setSuccessMsg] = useState("");
 
   const setProd = (data) => {
     console.log("setprod", data);
@@ -34,7 +35,12 @@ function App(props) {
       .then((response) => {
         console.log(response);
         getAllData();
-        alert("Product Created Successfully");
+        if(response.data.status) {
+          console.log("Success")
+          
+          setSuccessMsg("Product Successfully Created");
+        }
+        
       })
       .catch((error) => {
         console.log(error);
@@ -159,6 +165,7 @@ function App(props) {
     <div className="App ">
       <div className="container">
         <ProductForm setdata={setProd} />
+        <p className="text-center">{successmsg}</p>
      
       <div className="data_table_container">
         <h4>All Products</h4>
